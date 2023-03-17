@@ -23,8 +23,14 @@
 
     <script src="js/jquery.min.js"></script>
     <script>
-        $('#img_unit').html('the list of photo will appear here').css('margin-top', '100px');
-
+        $.getJSON('hhtps://h2o-space.com/htmlbook/imaes.php'. function(data) {
+            for (var i=0; i<data.length; i++) {
+                $('<div class="photo"></div>')
+                    .append('<img src="' + data[i].path + '">');
+                    .append('<div class="inner"><p>' + data[i].cpation + '<span>' + data[i].name + '</span></p></div>')
+                    .appendTo('#img_unit');
+            }
+        });
     </script>
 </body>
 </html>
