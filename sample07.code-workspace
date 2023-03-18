@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "sample07",
+			"path": "."
+		},
+		{
+			"name": "js",
+			"path": "../sample06/js"
+		}
+	],
+	"settings": {}
+}

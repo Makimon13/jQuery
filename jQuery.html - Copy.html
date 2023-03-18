@@ -19,9 +19,14 @@
     <div class="container">
         <div id="img_unit">
         </div>
+
+        <div id="vue_unit">
+            {{ message }}
+        </div>
     </div>
-                    jquery.min.js
+
     <script src="js/jquery.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
     <script>
         $.getJSON('https://h2o-space.com/htmlbook/images.php', function(data) {
             for (var i=0; i<data.length; i++) {
@@ -31,6 +36,13 @@
                     .appendTo('#img_unit');
             }
         });
+
+        var app = new Vue({
+            el: '#vue_unit',
+            data: {
+                message: 'rewrote with vue.js'
+            }
+        })
     </script>
 </body>
 </html>
